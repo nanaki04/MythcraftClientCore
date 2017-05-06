@@ -1,0 +1,3 @@
+%{"mockery": {:git, "https://github.com/nanaki04/MythcraftMockery.git", "9b45a8ac86f64647f626ebf7e492e151b7507778", []},
+  "moduleConfig": {:git, "https://github.com/nanaki04/ModuleConfig.git", "28605b2b0e55ecc8eef685e6820f8ce78453676d", []},
+  "moduleconfig": {:git, "https://github.com/nanaki04/ModuleConfig.git", "28605b2b0e55ecc8eef685e6820f8ce78453676d", []}}
