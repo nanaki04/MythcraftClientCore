@@ -4,8 +4,10 @@ defmodule Mc.Menu do
   """
   defstruct items: [], title: "", description: "Select a menu item by typing its associated number."
 
-  def for_each_item(menu, lambda) do
-    Enum.each(menu.items, fn(item) -> lambda.(Mc.MenuItem.get_text(item), Mc.MenuItem.get_on_select(item)) end)
+  def reduce_items(menu, state, lambda) do
+    Enum.reduce(menu.items, state, fn(item, state) ->
+      lambda.(state, Mc.MenuItem.get_text(item), Mc.MenuItem.get_on_select(item))
+    end)
   end
 
   def get_title(menu), do:
