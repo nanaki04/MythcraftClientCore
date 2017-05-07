@@ -12,7 +12,8 @@ defmodule Mc.MapSelectionMenu do
     }
   end
 
-  def on_select(client_id) do
+  def on_select(_, [{:client_id, client_id}]) do
+    # TODO implement
     Mc.CommandCenter.navigate_to_menu(client_id, Mc.MainMenu, nil)
   end
 

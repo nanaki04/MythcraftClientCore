@@ -17,7 +17,7 @@ defmodule Mc.MainMenu do
     }
   end
 
-  def on_select(client_id) do
+  def on_select(_, [{:client_id, client_id}]) do
     with {:ok, maps} <- Mc.CommandCenter.give_command(client_id, %Mc.Command{command: :get_maps}) do
       Mc.CommandCenter.navigate_to_menu(client_id, Mc.MapSelection, maps)
     else
